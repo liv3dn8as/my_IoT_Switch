@@ -3,7 +3,7 @@ local z = ...
 local i = 0
 
 local function setAP(ap, hf)
-	local nc = {ip = "192.168.4.1", netmask = "255.255.255.0", gateway = "192.168.4.1" hostname = "myNode_1"}
+	local nc = {ip = "192.168.4.1", netmask = "255.255.255.0", gateway = "192.168.4.1"}
 	wifi.ap.config(ap)
 	wifi.ap.setip(nc)
 	ap = nil
