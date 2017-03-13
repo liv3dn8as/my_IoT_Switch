@@ -3,7 +3,7 @@ local z = ...
 local i = 0
 
 local function setAP(ap, hf)
-	local nc = {ip = "192.168.4.1", netmask = "255.255.255.0", gateway = "192.168.4.1"}
+	local nc = {ip = "192.168.4.1", netmask = "255.255.255.0", gateway = "192.168.4.1" hostname = "myNode_1"}
 	wifi.ap.config(ap)
 	wifi.ap.setip(nc)
 	ap = nil
@@ -40,6 +40,7 @@ return function(hf)
 	f = nil
 	wifi.setmode(m)
 	wifi.sta.autoconnect(1)
+	wifi.sta.sethostname("myNode_1")
 	if m == wifi.STATION then
 		tmr.alarm(1, 1000, 1, function()
 			chk(m, ap, hf)
