@@ -40,7 +40,6 @@ return function(hf)
 	f = nil
 	wifi.setmode(m)
 	wifi.sta.autoconnect(1)
-	wifi.sta.sethostname("myNode_1")
 	if m == wifi.STATION then
 		tmr.alarm(1, 1000, 1, function()
 			chk(m, ap, hf)
