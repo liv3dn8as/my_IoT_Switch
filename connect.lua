@@ -35,8 +35,8 @@ return function(hf)
 	local f = require("cfgFile")()
 	local m = f.sta and wifi.STATION or wifi.STATIONAP
 	local ap = {}
-	ap.ssid = f.ssid or "myIoT";
-	ap.pwd = f.pwd or "thisisNOTatest";
+	ap.ssid = f.ssid or "YOUR_SSID";
+	ap.pwd = f.pwd or "YOUR_PWD";
 	f = nil
 	wifi.setmode(m)
 	wifi.sta.autoconnect(1)
